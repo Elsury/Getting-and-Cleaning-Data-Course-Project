@@ -47,4 +47,4 @@ names(subjects) <- "subject"
 # for each activity and each subject.
 
 overage_subs <- ddply (final_data, c("subject", "activity"), function (x) colMeans(x[1:66],na.rm=TRUE))
-write.table (overage_subs, "cleandata.txt") 
+write.table (overage_subs, "cleandata.txt", row.names = FALSE)  
